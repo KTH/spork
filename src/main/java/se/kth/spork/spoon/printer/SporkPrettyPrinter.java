@@ -47,6 +47,9 @@ public final class SporkPrettyPrinter extends DefaultJavaPrettyPrinter {
         // instead of just String, it will print java.lang.String. Which isn't great.
         setIgnoreImplicit(false);
 
+        // TODO detect these values instead of setting unconditionally
+        printerHelper.setLineSeparator("\n");
+
         globalContentConflicts = DEFAULT_CONFLICT_MAP;
     }
 
